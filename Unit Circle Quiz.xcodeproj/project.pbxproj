@@ -13,6 +13,9 @@
 		E4DEE4E51A01DB6600738A31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4DEE4E41A01DB6600738A31 /* Images.xcassets */; };
 		E4DEE4E81A01DB6600738A31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4DEE4E61A01DB6600738A31 /* LaunchScreen.xib */; };
 		E4DEE4F41A01DB6600738A31 /* Unit_Circle_QuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DEE4F31A01DB6600738A31 /* Unit_Circle_QuizTests.swift */; };
+		E4DEE4FE1A01E84100738A31 /* UnitCircleLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DEE4FD1A01E84100738A31 /* UnitCircleLib.swift */; };
+		E4DEE5001A031BC700738A31 /* TrigFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DEE4FF1A031BC700738A31 /* TrigFunc.swift */; };
+		E4DEE5041A0334DE00738A31 /* UnitCircleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DEE5031A0334DE00738A31 /* UnitCircleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		E4DEE4ED1A01DB6600738A31 /* Unit Circle QuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Circle QuizTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DEE4F21A01DB6600738A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4DEE4F31A01DB6600738A31 /* Unit_Circle_QuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_Circle_QuizTests.swift; sourceTree = "<group>"; };
+		E4DEE4FD1A01E84100738A31 /* UnitCircleLib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitCircleLib.swift; sourceTree = "<group>"; };
+		E4DEE4FF1A031BC700738A31 /* TrigFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrigFunc.swift; sourceTree = "<group>"; };
+		E4DEE5031A0334DE00738A31 /* UnitCircleHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitCircleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,15 @@
 		E4DEE4DA1A01DB6600738A31 /* Unit Circle Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				E4DEE5031A0334DE00738A31 /* UnitCircleHelper.swift */,
 				E4DEE4DD1A01DB6600738A31 /* AppDelegate.swift */,
 				E4DEE4DF1A01DB6600738A31 /* ViewController.swift */,
 				E4DEE4E11A01DB6600738A31 /* Main.storyboard */,
 				E4DEE4E41A01DB6600738A31 /* Images.xcassets */,
 				E4DEE4E61A01DB6600738A31 /* LaunchScreen.xib */,
 				E4DEE4DB1A01DB6600738A31 /* Supporting Files */,
+				E4DEE4FD1A01E84100738A31 /* UnitCircleLib.swift */,
+				E4DEE4FF1A031BC700738A31 /* TrigFunc.swift */,
 			);
 			path = "Unit Circle Quiz";
 			sourceTree = "<group>";
@@ -161,6 +170,7 @@
 				TargetAttributes = {
 					E4DEE4D71A01DB6600738A31 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 84P7Q2U88P;
 					};
 					E4DEE4EC1A01DB6600738A31 = {
 						CreatedOnToolsVersion = 6.1;
@@ -212,8 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DEE4FE1A01E84100738A31 /* UnitCircleLib.swift in Sources */,
+				E4DEE5041A0334DE00738A31 /* UnitCircleHelper.swift in Sources */,
 				E4DEE4E01A01DB6600738A31 /* ViewController.swift in Sources */,
 				E4DEE4DE1A01DB6600738A31 /* AppDelegate.swift in Sources */,
+				E4DEE5001A031BC700738A31 /* TrigFunc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +351,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Unit Circle Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,9 +364,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Unit Circle Quiz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
