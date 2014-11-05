@@ -426,6 +426,7 @@
 				E4DEE4F91A01DB6600738A31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4DEE4FA1A01DB6600738A31 /* Build configuration list for PBXNativeTarget "Unit Circle QuizTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +435,7 @@
 				E4DEE4FC1A01DB6600738A31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
