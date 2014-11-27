@@ -26,10 +26,10 @@ class TrigFunc {
     }
     
     func generateFunc() {
-        n = (Int)(arc4random()) % 22
+        n = (Int)(arc4random() % 22)
         d = 0
-        var i: Int = (Int)(arc4random()) % 6
-        var di = (Int)(arc4random()) % 4
+        var i: Int = (Int)(arc4random() % 6)
+        var di = (Int)(arc4random() % 4)
         var j = 2
         
         switch di {
