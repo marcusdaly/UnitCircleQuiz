@@ -81,6 +81,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="answerButton" destination="njg-W3-uOk" id="vug-E2-bk2"/>
                         <outlet property="answerLabel" destination="cOD-v3-jA5" id="M1n-hd-Wc6"/>
                         <outlet property="output" destination="Lpp-3j-NVc" id="Nwv-t7-V4E"/>
                         <outlet property="startOrNextButton" destination="HcZ-rg-21S" id="et1-6t-Irg"/>
@@ -181,14 +182,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfb-bi-XTa">
-                                <rect key="frame" x="30" y="57" width="260" height="224"/>
-                                <string key="text">This app was developed to help me prepare for quizzes on trig functions around the unit circle. I've made it available to others who also might find it valuable. The source code is open source and available for both lifting and contribution as one might like. Email me at onebuh@gmail.com with any feedback or bugs. Marcus Daly, November 2014.</string>
+                                <rect key="frame" x="30" y="57" width="260" height="203"/>
+                                <string key="text">This app was developed to help me prepare for quizzes on trig functions around the unit circle. I've made it available to others who also might find it valuable. The source code is open source and available for both lifting and contribution as one might like. Email me at onebuh@gmail.com with any feedback or bugs.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marcus Daly" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcg-NY-Id8">
+                                <rect key="frame" x="30" y="268" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December 2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsU-9k-cI6">
+                                <rect key="frame" x="30" y="297" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryf-u1-W3x">
-                                <rect key="frame" x="142" y="289" width="37" height="30"/>
+                                <rect key="frame" x="142" y="326" width="37" height="30"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -201,12 +214,16 @@
                         <constraints>
                             <constraint firstItem="Rfb-bi-XTa" firstAttribute="top" secondItem="k6q-pk-oZB" secondAttribute="bottom" constant="37" id="0Vh-j1-R4e"/>
                             <constraint firstItem="Rfb-bi-XTa" firstAttribute="top" secondItem="k6q-pk-oZB" secondAttribute="bottom" constant="37" id="7ke-LE-qtF"/>
-                            <constraint firstItem="Ryf-u1-W3x" firstAttribute="top" secondItem="Rfb-bi-XTa" secondAttribute="bottom" constant="8" id="97c-XA-pSO"/>
                             <constraint firstAttribute="centerX" secondItem="phw-J8-eS7" secondAttribute="centerX" id="9Tf-2t-kU7"/>
-                            <constraint firstAttribute="centerX" secondItem="Ryf-u1-W3x" secondAttribute="centerX" id="Jqw-Wd-5OC"/>
+                            <constraint firstItem="tcg-NY-Id8" firstAttribute="leading" secondItem="JZU-8p-Zmi" secondAttribute="leadingMargin" constant="14" id="EIV-yf-Wcn"/>
+                            <constraint firstItem="QsU-9k-cI6" firstAttribute="leading" secondItem="JZU-8p-Zmi" secondAttribute="leadingMargin" constant="14" id="HUo-Wp-3Sd"/>
+                            <constraint firstItem="QsU-9k-cI6" firstAttribute="top" secondItem="tcg-NY-Id8" secondAttribute="bottom" constant="8" id="KRb-n5-nFQ"/>
+                            <constraint firstItem="Ryf-u1-W3x" firstAttribute="top" secondItem="QsU-9k-cI6" secondAttribute="bottom" constant="8" id="PFi-2h-UUW"/>
                             <constraint firstItem="Rfb-bi-XTa" firstAttribute="leading" secondItem="JZU-8p-Zmi" secondAttribute="leadingMargin" constant="14" id="TRI-zL-mwq"/>
                             <constraint firstItem="phw-J8-eS7" firstAttribute="top" secondItem="k6q-pk-oZB" secondAttribute="bottom" constant="8" id="dKr-Ik-idy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Rfb-bi-XTa" secondAttribute="trailing" constant="14" id="dnl-K6-3H0"/>
+                            <constraint firstAttribute="centerX" secondItem="Ryf-u1-W3x" secondAttribute="centerX" id="fp9-h1-XkW"/>
+                            <constraint firstItem="tcg-NY-Id8" firstAttribute="top" secondItem="Rfb-bi-XTa" secondAttribute="bottom" constant="8" id="gHv-gg-m64"/>
                             <constraint firstAttribute="centerX" secondItem="Rfb-bi-XTa" secondAttribute="centerX" id="o4J-U6-Ybs"/>
                         </constraints>
                     </view>

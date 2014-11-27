@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var output: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var startOrNextButton: UIBarButtonItem!
+    @IBOutlet weak var answerButton: UIBarButtonItem!
 
     // To play sounds, we'll need some audioplayers
     var startNextSoundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("hi-hat", ofType: "wav")!)
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answerLabel.hidden = true
+        answerButton.enabled = false
         
         // prep the audioplayers (in case needed)
         startNextAudioPlayer = AVAudioPlayer(contentsOfURL: startNextSoundURL, error: nil)
@@ -44,6 +46,8 @@ class ViewController: UIViewController {
         output.text = currentTrigFunc.funcLabel
         answerLabel.hidden = true
         startOrNextButton.title = "Next"
+        answerButton.enabled = true
+
     }
 
     @IBAction func onAnswerTap(sender: AnyObject) {
@@ -53,6 +57,7 @@ class ViewController: UIViewController {
         
         answerLabel.text = currentTrigFunc.ans
         answerLabel.hidden = false
+        answerButton.enabled = false
     }
     
     override func didReceiveMemoryWarning() {

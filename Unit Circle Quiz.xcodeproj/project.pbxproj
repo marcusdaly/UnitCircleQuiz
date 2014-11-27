@@ -11,6 +11,7 @@
 		75C63E701A26E54A00EF03E5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C63E6F1A26E54A00EF03E5 /* SettingsViewController.swift */; };
 		75C63E731A26EFE100EF03E5 /* hi-hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75C63E711A26EFE100EF03E5 /* hi-hat.wav */; };
 		75C63E741A26EFE100EF03E5 /* cowbell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75C63E721A26EFE100EF03E5 /* cowbell.wav */; };
+		75C63E761A27914A00EF03E5 /* unit_circle_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 75C63E751A27914A00EF03E5 /* unit_circle_splash.png */; };
 		E4DEE4DE1A01DB6600738A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DEE4DD1A01DB6600738A31 /* AppDelegate.swift */; };
 		E4DEE4E01A01DB6600738A31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DEE4DF1A01DB6600738A31 /* ViewController.swift */; };
 		E4DEE4E31A01DB6600738A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4DEE4E11A01DB6600738A31 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		75C63E6F1A26E54A00EF03E5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		75C63E711A26EFE100EF03E5 /* hi-hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "hi-hat.wav"; sourceTree = "<group>"; };
 		75C63E721A26EFE100EF03E5 /* cowbell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cowbell.wav; sourceTree = "<group>"; };
+		75C63E751A27914A00EF03E5 /* unit_circle_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_circle_splash.png; sourceTree = "<group>"; };
 		E4DEE4D81A01DB6600738A31 /* Unit Circle Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Circle Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4DEE4DC1A01DB6600738A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4DEE4DD1A01DB6600738A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		E4DEE4DB1A01DB6600738A31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				75C63E751A27914A00EF03E5 /* unit_circle_splash.png */,
 				75C63E711A26EFE100EF03E5 /* hi-hat.wav */,
 				75C63E721A26EFE100EF03E5 /* cowbell.wav */,
 				E4DEE4DC1A01DB6600738A31 /* Info.plist */,
@@ -218,6 +221,7 @@
 				75C63E741A26EFE100EF03E5 /* cowbell.wav in Resources */,
 				E4DEE4E31A01DB6600738A31 /* Main.storyboard in Resources */,
 				E4DEE4E81A01DB6600738A31 /* LaunchScreen.xib in Resources */,
+				75C63E761A27914A00EF03E5 /* unit_circle_splash.png in Resources */,
 				E4DEE4E51A01DB6600738A31 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
