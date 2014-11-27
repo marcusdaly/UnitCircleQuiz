@@ -34,19 +34,19 @@ class TrigFunc {
         
         switch di {
         case 0:
-            d = 2;
-            break;
+            d = 2
+            break
         case 1:
-            d = 3;
-            break;
+            d = 3
+            break
         case 2:
-            d = 4;
-            break;
+            d = 4
+            break
         case 3:
-            d = 6;
-            break;
+            d = 6
+            break
         default:
-            break;
+            break
         }
         
         switch i {

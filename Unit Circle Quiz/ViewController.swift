@@ -7,32 +7,52 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
-    var currentTrigFunc: TrigFunc = TrigFunc()
+    var currentTrigFunc: TrigFunc = TrigFunc()    
+    @IBOutlet weak var output: UILabel!
+    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var startOrNextButton: UIBarButtonItem!
+
+    // To play sounds, we'll need some audioplayers
+    var startNextSoundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("hi-hat", ofType: "wav")!)
+    var answerSoundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cowbell", ofType: "wav")!)
+    var startNextAudioPlayer = AVAudioPlayer()
+    var answerAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         answerLabel.hidden = true
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // prep the audioplayers (in case needed)
+        startNextAudioPlayer = AVAudioPlayer(contentsOfURL: startNextSoundURL, error: nil)
+        startNextAudioPlayer.prepareToPlay()
+        
+        answerAudioPlayer = AVAudioPlayer(contentsOfURL: answerSoundURL, error: nil)
+        answerAudioPlayer.prepareToPlay()
+        
     }
-    @IBOutlet weak var output: UILabel!
-    @IBOutlet weak var answerLabel: UILabel!
-    //
-    
+
     @IBAction func newFunction(sender: AnyObject) {
+        if (NSUserDefaults.standardUserDefaults().boolForKey(K_PLAY_SOUND_ON_START_NEXT)) {
+            startNextAudioPlayer.play()
+        }
+        
         currentTrigFunc = TrigFunc()
         output.text = currentTrigFunc.funcLabel
-//        output.text = funcString()
-//        println(solve(output.text!))
         answerLabel.hidden = true
+        startOrNextButton.title = "Next"
     }
 
     @IBAction func onAnswerTap(sender: AnyObject) {
+        if (NSUserDefaults.standardUserDefaults().boolForKey(K_PLAY_SOUND_ON_ANSWER)) {
+            answerAudioPlayer.play()
+        }
+        
         answerLabel.text = currentTrigFunc.ans
         answerLabel.hidden = false
-//        answerLabel.text = solve(output.text!)
     }
     
     override func didReceiveMemoryWarning() {
