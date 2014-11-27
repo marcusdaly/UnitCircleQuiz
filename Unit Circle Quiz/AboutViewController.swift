@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class AboutViewController: UIViewController {
+class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +28,33 @@ class AboutViewController: UIViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func emailMe(sender: AnyObject) {
+        if (MFMailComposeViewController.canSendMail())
+        {
+            var mail = MFMailComposeViewController()
+            
+            mail.mailComposeDelegate = self
+            
+            mail.setSubject("Unit Circle Quiz - App Feedback")
+            mail.setMessageBody("Hi Marcus - \n\n", isHTML: false)
+            mail.setToRecipients(["onebuh@gmail.com"])
+            
+            self.presentViewController(mail, animated:true, completion:nil)
+        }
+        else
+        {
+            self.showSendMailErrorAlert()
+        }
     }
-    */
+    
+    func showSendMailErrorAlert() {
+        var sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
