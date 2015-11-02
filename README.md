@@ -27,5 +27,5 @@ This section is coming.
 
 ### Who do I talk to? ###
 
-* This is a private Mobulz team repo.  Please contact one buh@gmail.com for team member access.
+* This is a private Mobulz team repo.  Please contact onebuh@gmail.com for team member access.
 * As a backup, you can reach rjd@mobulz.com.
